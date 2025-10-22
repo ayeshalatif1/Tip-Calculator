@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-bg: hsl(183, 100%, 15%);
+    --tip-textColor: hsl(172, 67%, 45%);
+    --formInput-fontSize: 24px;
+    --body-bg: hsl(185, 41%, 84%);
+    --btn-clicked: hsl(184, 14%, 56%);
+    --text-color: white;
+}
+
+.active {
+    --dark-bg: hsl(172, 67%, 45%);
+    --text-color: black;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--body-bg);
+    height: 100vh;
+    width: 100vw;
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+
+}
+header {
+    height: 10vh;
+    width: 10vw;
+    justify-self: center;
+    background-image: url('assets/logo.svg');
+    background-repeat: no-repeat;
+    margin-bottom: 3em;
+}
+
+main {
+    display: flex;
+    width: 65vw;
+    background-color: white;
+    border-radius: 1em;
+}
+section {
+    width: 50%;
+    padding: 2em 2em;
+    display: flex;
+    flex-direction: column;
+
+}
+.rightSection {
+    background-color: var(--dark-bg);
+    color: var(--tip-textColor);
+    margin: 1em;
+    border-radius: 5%;
+    overflow-x: hidden;
+}
+.leftSection{
+    border-radius: 5%;
+}
+
+#customBtn {
+    width: 30%;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgba(243, 248, 251);
+}
+
+#customBtn::placeholder {
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+input {
+    background-color: rgba(243, 248, 251);
+    border: none;
+}
+
+.leftDiv input {
+    text-align: right;
+    margin-top: 5px;
+}
+
+.leftDiv button {
+    background-color: var(--dark-bg);
+}
+
+.leftDiv input::placeholder {
+    text-align: right;
+}
+
+
+
+
+
+.rightDiv {
+    margin-bottom: 1em;
+}
+
+
+.rightDiv h3 {
+    color: hsl(185, 41%, 84%);
+}
+
+.rightDiv p {
+    color: hsl(184, 14%, 56%);
+}
+
+.leftBtnDiv button {
+    font-family: "Space Mono", monospace;
+    font-weight: bolder;
+}
+
+
+.rightDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.leftDiv input {
+    padding: 1em;
+    border-radius: 5px;
+
+}
+
+.leftSection {
+    gap: 2em;
+}
+
+.rightSection {
+    gap: 2em;
+}
+
+.rightBtnDiv {
+    margin-top: 4em;
+}
+
+.leftSection input {
+    width: 100%;
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    color: var(--dark-bg);
+    font-size: 1rem;
+}
+
+.leftBtnDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+
+.leftBtnDiv button {
+    font-size: 24px;
+    width: 30%;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-weight: 300;
+
+}
+
+.btnDiv {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.leftBtnDiv button:active {
+    background-color: var(--btn-clicked);
+
+}
+
+
+h2 {
+    font-size: 3rem;
+}
+
+#reset {
+    width: 100%;
+    background-color: var(--tip-textColor);
+    color: black;
+    padding: 1em;
+    cursor: pointer;
+    font-family: "Space Mono", monospace;
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+
+#billInput {
+    background-image: url('assets/icon-dollar.svg');
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+
+#people {
+    background-image: url('assets/icon-person.svg');
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+}
+input[type=number]
+{
+    text-align: right;
+ 
+}
+input[type=number]:focus{
+    outline: none;
+    border: none;
+}
+
+@media (min-width:375px) and (max-width:600px){
+    main{
+        width: 90vw;
+        flex-wrap: wrap;
+    }
+    section{
+        width: 90%;
+    }
+    header{
+        width: 25vw;
+    }
+     .leftBtnDiv button{
+        width: 47%;
+    }
+    #customBtn{
+        width: 47%;
+    }
+    
+}
+@media (min-width:601px) and (max-width:768px)
+{
+    main{
+        width: 70vw;
+        flex-wrap: wrap;
+    }
+    section{
+        width: 100%;
+    }
+    .leftBtnDiv button{
+        width: 45%;
+    }
+    #customBtn {
+        width: 45%;
+    }
+}
+@media (min-width:769px) and (max-width:1200px)
+{
+    main{
+        width: 50vw;
+        flex-wrap: wrap;
+    }
+    section{
+        width: 100%;
+    }
+}
