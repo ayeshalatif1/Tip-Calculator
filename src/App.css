@@ -64,7 +64,7 @@ main {
 
     background-color: white;
     border-radius: 1em;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 section {
@@ -86,7 +86,7 @@ section {
     color: var(--tip-textColor);
     margin: 1em;
     border-radius: 5%;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 .leftSection {
@@ -311,6 +311,7 @@ input[type=number]:focus {
     main {
         flex-direction: column;
         width: 90%;
+        margin:auto;
     }
 
     section {
@@ -324,6 +325,10 @@ input[type=number]:focus {
 
     header {
         width: 150px;
+    }
+    .rightSection{
+        gap: 0em;
+        margin: 0em;
     }
 }
 
