@@ -23,13 +23,14 @@ body {
     justify-content: center;
     align-items: center;
     background-color: var(--body-bg);
-    height: 100vh;
-    width: 100vw;
+    height: auto;
+    /* width: 100vw; */
     font-family: "Space Mono", monospace;
     font-weight: 700;
     font-style: normal;
 
 }
+
 header {
     height: 10vh;
     width: 10vw;
@@ -41,17 +42,22 @@ header {
 
 main {
     display: flex;
-    width: 65vw;
+    /* width: 65vw; */
     background-color: white;
     border-radius: 1em;
+    border: 2px solid red;
 }
+
 section {
     width: 50%;
+    width: 50%;
+    max-width: 1400px;
     padding: 2em 2em;
     display: flex;
     flex-direction: column;
 
 }
+
 .rightSection {
     background-color: var(--dark-bg);
     color: var(--tip-textColor);
@@ -59,7 +65,8 @@ section {
     border-radius: 5%;
     overflow-x: hidden;
 }
-.leftSection{
+
+.leftSection {
     border-radius: 5%;
 }
 
@@ -211,61 +218,70 @@ h2 {
 }
 
 input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button{
+input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
 }
-input[type=number]
-{
+
+input[type=number] {
     text-align: right;
- 
+
 }
-input[type=number]:focus{
+
+input[type=number]:focus {
     outline: none;
     border: none;
 }
 
-@media (min-width:375px) and (max-width:600px){
-    main{
+@media (min-width:375px) and (max-width:600px) {
+    main {
         width: 90vw;
         flex-wrap: wrap;
     }
-    section{
+
+    section {
         width: 90%;
     }
-    header{
+
+    header {
         width: 25vw;
     }
-     .leftBtnDiv button{
+
+    .leftBtnDiv button {
         width: 47%;
     }
-    #customBtn{
+
+    #customBtn {
         width: 47%;
     }
-    
+
 }
-@media (min-width:601px) and (max-width:768px)
-{
-    main{
+
+@media (min-width:601px) and (max-width:768px) {
+    main {
         width: 70vw;
         flex-wrap: wrap;
     }
-    section{
+
+    section {
         width: 100%;
     }
-    .leftBtnDiv button{
+
+    .leftBtnDiv button {
         width: 45%;
     }
+
     #customBtn {
         width: 45%;
     }
 }
-@media (min-width:769px) and (max-width:1200px)
-{
-    main{
+
+@media (min-width:769px) and (max-width:1200px) {
+    main {
         width: 50vw;
         flex-wrap: wrap;
     }
-    section{
+
+    section {
         width: 100%;
     }
 }
