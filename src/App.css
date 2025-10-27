@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
 
 :root {
     --dark-bg: hsl(183, 100%, 15%);
@@ -40,7 +44,7 @@ header {
     margin-bottom: 3em; */
 
     /* added this */
-      width: 120px;
+    width: 120px;
     height: 60px;
     background-size: contain;
     background-position: center;
@@ -53,8 +57,9 @@ main {
     /* added this */
     flex-direction: row;   
     /* width: 65vw; */
-    max-width: 900px;
     width: 100%;
+    max-width: 900px;
+    
     flex-wrap: wrap;
 
     background-color: white;
