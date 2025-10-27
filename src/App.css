@@ -32,26 +32,44 @@ body {
 }
 
 header {
-    height: 10vh;
+    /* height: 10vh;
     width: 10vw;
-    justify-self: center;
+    justify-self: center; */
     background-image: url('assets/logo.svg');
+    /* background-repeat: no-repeat;
+    margin-bottom: 3em; */
+
+    /* added this */
+      width: 120px;
+    height: 60px;
+    background-size: contain;
+    background-position: center;
     background-repeat: no-repeat;
-    margin-bottom: 3em;
+    margin: 2em auto;
 }
 
 main {
     display: flex;
+    /* added this */
+    flex-direction: row;   
     /* width: 65vw; */
+    max-width: 900px;
+    width: 100%;
+    flex-wrap: wrap;
+
     background-color: white;
     border-radius: 1em;
     border: 2px solid red;
 }
 
 section {
+    /* width: 50%;
     width: 50%;
-    width: 50%;
-    max-width: 1400px;
+    max-width: 1400px; */
+
+    /* added this */
+       flex: 1 1 300px;
+
     padding: 2em 2em;
     display: flex;
     flex-direction: column;
@@ -232,9 +250,8 @@ input[type=number]:focus {
     border: none;
 }
 
-@media (min-width:375px) and (max-width:600px) {
+/* @media (min-width:375px) and (max-width:600px) {
     main {
-        width: 90vw;
         flex-wrap: wrap;
     }
 
@@ -258,7 +275,6 @@ input[type=number]:focus {
 
 @media (min-width:601px) and (max-width:768px) {
     main {
-        width: 70vw;
         flex-wrap: wrap;
     }
 
@@ -277,11 +293,32 @@ input[type=number]:focus {
 
 @media (min-width:769px) and (max-width:1200px) {
     main {
-        width: 50vw;
         flex-wrap: wrap;
     }
 
     section {
         width: 100%;
     }
+} 
+
+*/
+@media (max-width: 900px) {
+    main {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    .leftBtnDiv button,
+    #customBtn {
+        width: 48%;
+    }
+
+    header {
+        width: 150px;
+    }
 }
+
